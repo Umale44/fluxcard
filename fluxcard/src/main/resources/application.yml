@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: marqeta
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/fluxcard
+    username: root
+    password: Suspectshot23%
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+marqeta:
+  api:
+    base-url: "https://sandbox-api.marqeta.com/v3"
+    application-token: "ae6a3ec2-086a-4f0a-81a5-397b4b84398a"
+    admin-access-token: "605df932-7e58-498d-8a2e-dd5cf7e3e1be"
+
+
+server:
+  port: 8081
+  ssl:
+    enabled: false
+    key-store: classpath:keystore.p12
+    key-store-password: Suspectshot23%
+    key-store-type: PKCS12
+    key-alias: marqeta-ssl
+debug: true
